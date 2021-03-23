@@ -1,4 +1,4 @@
-# Design patterns sandbox/playground
+# Sandbox/playground
 
 Modules represent:
 
