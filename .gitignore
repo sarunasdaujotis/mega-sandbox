@@ -1,0 +1,15 @@
+# Project exclude paths
+/.gradle/
+/behavioral-design-patterns/build/
+/behavioral-design-patterns/build/classes/java/main/
+/behavioral-design-patterns/build/classes/java/test/
+/creational-design-patterns/build/
+/creational-design-patterns/build/classes/java/main/
+/creational-design-patterns/build/classes/java/test/
+/structural-design-patterns/build/
+/structural-design-patterns/build/classes/java/main/
+/structural-design-patterns/build/classes/java/test/
+# Project exclude paths
+/leap-year-junit5/build/
+/leap-year-junit5/build/classes/java/main/
+/leap-year-junit5/build/classes/java/test/

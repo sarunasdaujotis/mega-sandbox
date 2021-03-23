@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id "jacoco"
+}
+
+group 'com.sarunasdaujotis'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+jacoco {
+    toolVersion = '0.8.5'
+    reportsDir = file("${buildDir}/reports/jacoco")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile project(":leap-year-junit5")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+}
