@@ -44,7 +44,7 @@ public class NumberCloseToZeroTests {
 	class Invalid_scenarios {
 		@ParameterizedTest
 		@EmptySource
-		void if_it_is_empty_array(int[] array) {
+		void if_it_is_an_empty_array(int[] array) {
 			Assertions.assertThrows(IllegalArgumentException.class, () -> Closest.toZero(array));
 		}
 
