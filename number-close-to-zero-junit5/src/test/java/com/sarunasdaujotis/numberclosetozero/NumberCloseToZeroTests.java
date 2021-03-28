@@ -2,7 +2,6 @@ package com.sarunasdaujotis.numberclosetozero;
 
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
@@ -19,22 +18,21 @@ public class NumberCloseToZeroTests {
 
 	@Nested
 	class Valid_scenarios {
-		@ParameterizedTest
-		@DisplayName("{0}, {1}")
+		@ParameterizedTest(name = "Input array {0}; expected {1}")
 		@CsvFileSource(resources = "/input-positive-numbers.csv", delimiterString = ";")
 		void if_array_contains_only_positive_numbers(@ConvertWith(IntArrayConverter.class) int[] input,
 				@ConvertWith(IntConverter.class) int expected) {
 			Assertions.assertEquals(expected, Closest.toZero(input));
 		}
 
-		@ParameterizedTest
+		@ParameterizedTest(name = "Input array {0}; expected {1}")
 		@CsvFileSource(resources = "/input-mixed-numbers.csv", delimiterString = ";")
 		void if_array_contains_mixed_numbers(@ConvertWith(IntArrayConverter.class) int[] input,
 				@ConvertWith(IntConverter.class) int expected) {
 			Assertions.assertEquals(expected, Closest.toZero(input));
 		}
 
-		@ParameterizedTest
+		@ParameterizedTest(name = "Input array {0}; expected {1}")
 		@CsvFileSource(resources = "/input-negative-numbers.csv", delimiterString = ";")
 		void if_array_contains_only_negative_numbers(@ConvertWith(IntArrayConverter.class) int[] input,
 				@ConvertWith(IntConverter.class) int expected) {
