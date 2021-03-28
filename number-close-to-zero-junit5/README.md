@@ -1,0 +1,1 @@
+# A Sample Closest number to zero application to play around with JUnit5 
