@@ -2,7 +2,7 @@ package com.sarunasdaujotis.numberclosetozero;
 
 public class Closest {
 	public static int toZero(final int... input) {
-		if (input.length == 0) {
+		if (input == null || input.length == 0) {
 			throw new IllegalArgumentException();
 		}
 

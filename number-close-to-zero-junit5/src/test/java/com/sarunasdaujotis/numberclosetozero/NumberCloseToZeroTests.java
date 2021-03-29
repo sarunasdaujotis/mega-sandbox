@@ -11,7 +11,7 @@ import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.ArgumentConverter;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.EmptySource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class NumberCloseToZeroTests {
@@ -43,7 +43,7 @@ public class NumberCloseToZeroTests {
 	@Nested
 	class Invalid_scenarios {
 		@ParameterizedTest
-		@EmptySource
+		@NullAndEmptySource
 		void if_it_is_an_empty_array(int[] array) {
 			Assertions.assertThrows(IllegalArgumentException.class, () -> Closest.toZero(array));
 		}
